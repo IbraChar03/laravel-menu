@@ -57,4 +57,9 @@ class MainController extends Controller
         $menu->save();
         return redirect()->route("home");
     }
+    public function deleteMenu(Menu $menu)
+    {
+        $menu->delete();
+        return redirect()->route("home");
+    }
 }

@@ -13,7 +13,8 @@
         <strong>Sauce : </strong>{{$menu -> sauceName}} <br>
         <strong>Fruit : </strong>{{$menu -> fruitName}} <br>
         <strong>Total Price : </strong>{{$menu -> price}} &euro; <br>
-        <a href="{{route('menu.edit',$menu)}}">EDIT</a>
+        <a href="{{route('menu.edit',$menu)}}">EDIT</a> <br>
+        <a href="{{route('menu.delete',$menu)}}">DELETE</a>
     </li> <br> <br>
 
     @endforeach
