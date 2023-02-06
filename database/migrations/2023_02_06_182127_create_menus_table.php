@@ -16,8 +16,8 @@ return new class extends Migration {
             $table->id();
             $table->string("foodName");
             $table->string("beverageName");
-            $table->string("sauceName");
-            $table->string("fruitName");
+            $table->string("sauceName")->nullable();
+            $table->string("fruitName")->nullable();
             $table->float("price")->unsigned();
             $table->timestamps();
         });
