@@ -12,7 +12,8 @@
         <strong>Beverage : </strong>{{$menu -> beverageName}} <br>
         <strong>Sauce : </strong>{{$menu -> sauceName}} <br>
         <strong>Fruit : </strong>{{$menu -> fruitName}} <br>
-        <strong>Total Price : </strong>{{$menu -> price}} &euro;
+        <strong>Total Price : </strong>{{$menu -> price}} &euro; <br>
+        <a href="{{route('menu.edit',$menu)}}">EDIT</a>
     </li> <br> <br>
 
     @endforeach

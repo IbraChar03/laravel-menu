@@ -35,4 +35,26 @@ class MainController extends Controller
         return redirect()->route("home");
 
     }
+    public function editMenu(Menu $menu)
+    {
+        return view("pages.edit-menu", compact("menu"));
+
+    }
+    public function updateMenu(Request $request, Menu $menu)
+    {
+        $data = $request->validate([
+            "foodName" => "string|max:32|required",
+            "beverageName" => "string|max:32|required",
+            "sauceName" => "string|max:32|required",
+            "fruitName" => "string|max:32|required",
+            "price" => "numeric|required"
+        ]);
+        $menu->foodName = $data["foodName"];
+        $menu->beverageName = $data["beverageName"];
+        $menu->sauceName = $data["sauceName"];
+        $menu->fruitName = $data["fruitName"];
+        $menu->price = $data["price"];
+        $menu->save();
+        return redirect()->route("home");
+    }
 }
